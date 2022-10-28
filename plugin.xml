@@ -32,29 +32,6 @@
         <clobbers target="plugin.backgroundMode" />
     </js-module>
 
-    <!-- ios -->
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="BackgroundMode">
-                <param name="ios-package" value="APPBackgroundMode" onload="true" />
-                <param name="onload" value="true" />
-            </feature>
-        </config-file>
-
-        <config-file target="*-Info.plist" parent="UIBackgroundModes">
-            <array>
-                <string>audio</string>
-            </array>
-        </config-file>
-
-        <resource-file src="appbeep.wav" />
-
-        <header-file src="src/ios/APPBackgroundMode.h" />
-        <source-file src="src/ios/APPBackgroundMode.m" />
-        <header-file src="src/ios/APPMethodMagic.h" />
-        <source-file src="src/ios/APPMethodMagic.m" />
-    </platform>
-
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
@@ -100,19 +77,6 @@
         <resource-file src="src/android/res/drawable-mdpi/power.png" target="res/drawable-mdpi/power.png" />
         <resource-file src="src/android/res/drawable-xhdpi/power.png" target="res/drawable-xhdpi/power.png" />
         <resource-file src="src/android/res/drawable-xxhdpi/power.png" target="res/drawable-xxhdpi/power.png" />
-    </platform>
-
-    <!-- browser -->
-    <platform name="browser">
-        <config-file target="config.xml" parent="/*">
-            <feature name="BackgroundMode">
-                <param name="browser-package" value="BackgroundMode"/>
-            </feature>
-        </config-file>
-
-        <js-module src="src/browser/BackgroundModeProxy.js" name="BackgroundMode.Proxy">
-            <runs />
-        </js-module>
     </platform>
 
 </plugin>
