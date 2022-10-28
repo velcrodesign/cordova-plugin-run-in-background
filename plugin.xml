@@ -9,7 +9,7 @@
 
     <description>Prevent apps from going to sleep in background.</description>
 
-    <repo>https://bitbucket.org:TheBosZ/cordova-plugin-run-in-background.git</repo>
+    <repo>https://github.com/velcrodesign/cordova-plugin-run-in-background.git</repo>
 
     <keywords>appplant, background</keywords>
 
